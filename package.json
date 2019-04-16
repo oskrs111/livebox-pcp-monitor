@@ -1,0 +1,25 @@
+{
+  "name": "livebox-pcp-monitor",
+  "version": "0.0.1",
+  "description": "Monitoring tool for PCP configuration in Livebox (ORANGE) routers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start":"ndb ./index.js"
+  },
+  "keywords": [
+    "Livebox",
+    "Orange",
+    "PCP",
+    "livebox",
+    "orange",
+    "pcp"
+  ],
+  "author": "Oscar Sanz",
+  "license": "MIT",
+  "dependencies": {
+    "fast-xml-parser": "^3.12.12",
+    "node-html-parser": "^1.1.12",
+    "request": "^2.88.0"
+  }
+}

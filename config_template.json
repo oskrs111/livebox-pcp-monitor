@@ -1,0 +1,26 @@
+{
+    "application":{
+        "monitorInterval": 3600,
+        "updateInterval": 5000,
+        "logEnable": true
+    },
+    "livebox":{
+        "ip":"192.168.1.1",
+        "username":"admin",
+        "password":"admin"
+    },
+    "pcp":[
+        {
+            "publicPort":"80",
+            "internalPort":"80",
+            "internalIp":"192.168.1.2"            
+        },    
+        {
+            "publicPort":"443",
+            "internalPort":"443",
+            "internalIp":"192.168.1.3"    
+        }        
+    ]
+}
+
+

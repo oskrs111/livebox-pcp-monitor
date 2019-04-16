@@ -20,17 +20,22 @@ Just clone or download this repository into a folder.
 $ git clone https://github.com/oskrs111/livebox-pcp-monitor.git
 ```
 
-Then navigate into folder and start.
+Then navigate into folder and install dependencies.
 
 ```bash
 $ cd ./livebox-pcp-monitor
+$ npm install
+```
+
+Finally run the utility.
+
+```bash
 $ livebox-pcp-monitor/node ./index.js
 ```
 
 Alternatively with **pm2** manager.
 
 ```bash
-$ cd ./livebox-pcp-monitor
 $ livebox-pcp-monitor/pm2 start ./index.js --name pcp-monitor
 ```
 ## Configuration

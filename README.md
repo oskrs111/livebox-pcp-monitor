@@ -45,7 +45,8 @@ Application use **config.json** file for configurations, you have to generate co
 {
     "application":{
         "monitorInterval": 3600,
-        "updateInterval": 5000,
+        "updateInterval": 15,
+        "resetWait": 90,
         "logEnable": true
     },
     "livebox":{
@@ -54,21 +55,39 @@ Application use **config.json** file for configurations, you have to generate co
         "password":"admin"
     },
     "pcp":[
+    {
+            "publicPort":"443",
+            "internalPort":"443",
+            "internalIp":"192.168.1.2",
+            "protocol": "TCP",
+            "proposeAllow": 1
+        }, 
         {
             "publicPort":"80",
             "internalPort":"80",
-            "internalIp":"192.168.1.2"            
-        },    
-        {
-            "publicPort":"443",
-            "internalPort":"443",
-            "internalIp":"192.168.1.3"    
-        }        
+            "internalIp":"192.168.1.3",
+            "protocol": "TCP",
+            "proposeAllow": 1			
+        } 
     ]
 }
 ```
-
 ### application
-### livebox
-### pcp
+> **monitorInterval** - Time between the app will check PCP configuration in Livebox, in seconds. \
+> **updateInterval** - Wait interval between PCP entries update, in seconds. \
+> **resetWait** - Wait time to let Lvebox to complete the restart process, in seconds. \
+> **logEnable** - Enables or disables the *updates.log* writting, true or false. \
 
+### livebox
+> **ip** - String with ipV4 Livebox ethernet address. \
+> **username** - Login username for Livebox. \
+> **password** - Login password for Livebox. \
+
+### pcp
+**Array of configuration objects, as found in NAT redirection Livebox form:**
+
+> **publicPort** - String with requested public port. \
+> **internalPort** - String with internal public port. \
+> **internalIp** - String with internal IPV4 ethernet address. \
+> **protocol** - String with requested protocol, "TCP" or "UDP". \
+> **proposeAllow** - Enables o disables the PCP port proposal, 1 or 0.\
